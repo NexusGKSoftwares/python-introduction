@@ -129,15 +129,15 @@
 # if student's percentage is greater than 80 then student is in A grade
 # elif student's percentage is greater than 60 then student is in B grade
 
-# mark = 50
-# if mark > 80:
-#     print("A grade")
-# elif mark > 60:
-#     print("B grade")
-# elif mark > 40:
-#     print("C grade")
-# else:
-#     print("D grade")
+mark = 50
+if mark > 80:
+    print("A grade")
+elif mark > 60:
+    print("B grade")
+elif mark > 40:
+    print("C grade")
+else:
+    print("D grade")
 
 # summary of today's lesson
 # operators
