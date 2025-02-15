@@ -75,17 +75,17 @@
 # python provides several tools for debugging and error handling.
 # it uses a concept called try-except blocks to handle errors.
 # example of try-except block
-try:
-    num = int(input("Enter a number: "))
-    print(10 / num)
-except ZeroDivisionError:
-    print("Error: Division by zero is not allowed")
-except ValueError:
-    print("Error: Invalid input. Please enter a valid number.")
+# try:
+#     num = int(input("Enter a number: "))
+#     print(10 / num)
+# except ZeroDivisionError:
+#     print("Error: Division by zero is not allowed")
+# except ValueError:
+#     print("Error: Invalid input. Please enter a valid number.")
 
 
 # real life example
-# online payment processing
+# online payment processing system
 # payments fails due to invalid card number,network issues, insufficient funds etc.
 # we can use try-except block to handle these errors and provide a better user experience.
 # example of try-except block in online payment processing
@@ -112,10 +112,10 @@ except ValueError:
 #         print("Payment successful")
         
         
-# process_payment(0) - simulating invalid amount
-# process_payment(15000) - simulating transaction limit
-# process_payment(200) - simulates network issue
-# process_payment(399) - transaction successful 
+# process_payment(0)  # simulating invalid amount
+# process_payment(15000)  # simulating transaction limit
+# process_payment(200)  # simulates network issue
+# process_payment(399)  # transaction successful 
 
 #  try block runs the payment logic
 #  except block handles the errors and provides a better user experience
