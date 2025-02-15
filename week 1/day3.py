@@ -75,13 +75,13 @@
 # python provides several tools for debugging and error handling.
 # it uses a concept called try-except blocks to handle errors.
 # example of try-except block
-# try:
-#     num = int(input("Enter a number: "))
-#     print(10 / num)
-# except ZeroDivisionError:
-#     print("Error: Division by zero is not allowed")
-# except ValueError:
-#     print("Error: Invalid input. Please enter a valid number.")
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed")
+except ValueError:
+    print("Error: Invalid input. Please enter a valid number.")
 
 
 # real life example
@@ -89,27 +89,27 @@
 # payments fails due to invalid card number,network issues, insufficient funds etc.
 # we can use try-except block to handle these errors and provide a better user experience.
 # example of try-except block in online payment processing
-def process_payment(amount):
-    try:
-        # simulate a payment processing
-        if amount <= 0:
-            raise ValueError("Invalid amount. Amount should be greater then zero")
-        elif amount > 10000:
-            raise OverflowError("Invalid amount. Amount should be less then 10000")
-        elif amount % 2 == 0: # simulate a network issue or random failures
-            raise ConnectionError("Network issue. Please try again later")
+# def process_payment(amount):
+#     try:
+#         # simulate a payment processing
+#         if amount <= 0:
+#             raise ValueError("Invalid amount. Amount should be greater then zero")
+#         elif amount > 10000:
+#             raise OverflowError("Invalid amount. Amount should be less then 10000")
+#         elif amount % 2 == 0: # simulate a network issue or random failures
+#             raise ConnectionError("Network issue. Please try again later")
         
                     
-    except ValueError as ve:
-        print(f"Payment Error: {ve}")
-    except OverflowError as oe:
-        print(f"Payment Error: {oe}")
-    except ConnectionError as ce:
-        print(f"Payment Error: {ce}")
-    except Exception as e:
-        print(f"Payment Error: {e}")
-    else:
-        print("Payment successful")
+#     except ValueError as ve:
+#         print(f"Payment Error: {ve}")
+#     except OverflowError as oe:
+#         print(f"Payment Error: {oe}")
+#     except ConnectionError as ce:
+#         print(f"Payment Error: {ce}")
+#     except Exception as e:
+#         print(f"Payment Error: {e}")
+#     else:
+#         print("Payment successful")
         
         
 # process_payment(0) - simulating invalid amount
