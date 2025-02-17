@@ -133,6 +133,7 @@ for class_group in [class_1, class_2, class_3]:
         print(student)  # output: John, Mary, David, Jane, Peter, Linda,
         
         
+        
 # summarize the class of today
 # lets summarize the class of today
 # we have learned about lists and how to use them in python
