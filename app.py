@@ -7,13 +7,13 @@ window = tk.Tk()
 window.title("Simple Calculator")
 window.geometry("400x400")
 # create a label
-label = tk.Label(window, text="Enter two numbers")
+label = tk.Label(window, text="Enter first numbers")
 label.pack()
 # create an entry
 entry = tk.Entry(window)
 entry.pack()
 # create another label
-label2 = tk.Label(window, text="Enter the operation")
+label2 = tk.Label(window, text="Enter second number")
 label2.pack()
 # create another entry
 entry2 = tk.Entry(window)
@@ -38,15 +38,19 @@ def calculate():
         messagebox.showinfo("Result", result)
     except ValueError:
         messagebox.showerror("Error", "Please enter a valid number")
-# create a button
-button = tk.Button(window, text="Calculate", command=calculate)
-button.pack()
+
 # create another label
 label3 = tk.Label(window, text="Enter the operation")
 label3.pack()
-# create another entry
+# create a button
+button = tk.Button(window, text="Calculate", command=calculate)
+button.pack()
+
+#  add a new entry to display the result
 entry3 = tk.Entry(window)
 entry3.pack()
+# create another entry
+
 # run the main loop
 window.mainloop()
 # output
