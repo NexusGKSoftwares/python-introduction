@@ -150,5 +150,3 @@ for key, value in school.items():
 #  | Dictionary| Unordered collection of key-value pairs | No | No | Yes | {" a ": 1} | - | Key-Value Pair | No | No | Yes | Yes | No | 
 #  =================================================================================================================
 
-
-
