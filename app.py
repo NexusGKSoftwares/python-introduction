@@ -1,57 +1,29 @@
-#  lets create a simple calculator using tinkter in python
-# code 
-import tkinter as tk
-from tkinter import messagebox
-# create a window
-window = tk.Tk()
-window.title("Simple Calculator")
-window.geometry("400x400")
-# create a label
-label = tk.Label(window, text="Enter first numbers")
-label.pack()
-# create an entry
-entry = tk.Entry(window)
-entry.pack()
-# create another label
-label2 = tk.Label(window, text="Enter second number")
-label2.pack()
-# create another entry
-entry2 = tk.Entry(window)
-entry2.pack()
-# create a function to calculate the
-# result
-def calculate():
-    try:
-        num1 = int(entry.get())
-        num2 = int(entry2.get())
-        operation = entry3.get()
-        if operation == "+":
-            result = num1 + num2
-        elif operation == "-":
-            result = num1 - num2
-        elif operation == "*":
-            result = num1 * num2
-        elif operation == "/":
-            result = num1 / num2
-        else:
-            result = "Invalid operation"
-        messagebox.showinfo("Result", result)
-    except ValueError:
-        messagebox.showerror("Error", "Please enter a valid number")
+import hashlib
+import itertools
+import string
 
-# create another label
-label3 = tk.Label(window, text="Enter the operation")
-label3.pack()
-# create a button
-button = tk.Button(window, text="Calculate", command=calculate)
-button.pack()
+# Given SHA-1 hash
+target_hash = "32d28d89e1d9e1030478f2e8eb814e907ed56c31"
 
-#  add a new entry to display the result
-entry3 = tk.Entry(window)
-entry3.pack()
-# create another entry
+# Character set (Modify based on expected complexity)
+charset = string.ascii_lowercase + string.digits  # a-z, 0-9
 
-# run the main loop
-window.mainloop()
-# output
+# Define max length of password to try
+max_length = 6  # Adjust based on complexity
 
+def brute_force_sha1():
+    for length in range(1, max_length + 1):  # Start from 1-char passwords
+        for guess in itertools.product(charset, repeat=length):
+            word = "".join(guess)  # Convert tuple to string
+            hashed_word = hashlib.sha1(word.encode()).hexdigest()  # Hash it
+            
+            if hashed_word == target_hash:
+                print(f"\n[+] Hash cracked! The password is: {word}")
+                return
+            
+            print(f"[-] Trying: {word}", end="\r")  # Live status update
+    
+    print("\n[-] Password not found. Try increasing max_length or changing charset.")
+
+# Start brute force attack
+brute_force_sha1()
