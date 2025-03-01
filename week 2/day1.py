@@ -66,9 +66,9 @@
 # removing an item in a list
 # we can remove an item in a list using the remove() method
 # lets try to remove an item in a list
-# my_list = [1, 2, 3, 4, 5]
-# my_list.remove(3)
-# print(my_list)  # output: [1, 2, 4, 5]
+my_list = [1, 2, 3, 4, 5]
+my_list.remove(3)
+print(my_list)  # output: [1, 2, 4, 5]
 
 # # lets try to use fruits
 # fruits = ['apple', 'banana', 'cherry']

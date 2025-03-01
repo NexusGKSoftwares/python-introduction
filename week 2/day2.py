@@ -9,10 +9,14 @@
 # tuples are also more flexible than lists because they can be used in a variety of contexts, such as in function arguments and return values
 # tuples are also more efficient than lists because they are implemented in C, which makes them faster than lists which are implemented in Python
 
+# more explanation on tuples
+
+
+
 
 # creating a tuple
 # we can create a tuple by enclosing a sequence of values in parentheses, like this: (value
-# tuple1 = (1, 2, 3, 4, 5)
+tuple1 = (1, 2, 3, 4, 5)
 # print(tuple1)  # output: (1, 2, 3, 4,5)
 # we can also create a tuple with a single value, like this: (value
 # tuple2 = (10)
