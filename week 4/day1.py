@@ -64,3 +64,6 @@ with open("data.txt", "r") as f:
 # we learned about the with statement and how to use it to open a file and read it 
 # we learned about the readlines() function and how to use it to read a file line by line 
 # we learned about the read() function and how to use it to read a file and then split it into lines
+
+
+
